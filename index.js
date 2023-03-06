@@ -1,6 +1,7 @@
-import { Array }  from "./DataStructures/array.js";
-import { Object } from "./DataStructures/object.js";
-import { setExample } from "./DataStructures/set.js";
+import { Array }  from "./DataStructures/1_builtIn/array.js";
+import { Object } from "./DataStructures/1_builtIn/object.js";
+import { setExample } from "./DataStructures/1_builtIn/set.js";
+import { mapExample } from "./DataStructures/1_builtIn/map.js";
 
 // Array--------------
 // Array();
@@ -10,4 +11,7 @@ import { setExample } from "./DataStructures/set.js";
 // Object()
 
 // Set----------------
-setExample();
+// setExample();
+
+// Map----------------
+mapExample();
