@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
-    "test": "nodemon DataStructures/2_stack/stack.js"
+    "test": "nodemon DataStructures/3_queue/queue.js"
   },
   "author": "SkyDe",
   "license": "ISC",

@@ -15,6 +15,7 @@ export const stackExample = () => {
         }
     
         peek(){
+            if(this.isEmpty()) return null;
             return this.items[this.items.length -1]
         }
     
