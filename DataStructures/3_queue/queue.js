@@ -1,7 +1,7 @@
 
 
 export const queue = () => {
-    
+
         class Queue{
         constructor(){
             this.items = [];
@@ -30,6 +30,7 @@ export const queue = () => {
     
         clear(){
             this.items = [];
+            return "Queue Cleared"
         }
     
         print(){
@@ -45,7 +46,7 @@ export const queue = () => {
     
     console.log("Print method");
     queue.print();
-    console.log("Enueue method add number 2,3,4 repectively");
+    console.log("Enueue method add number 1,2,3,4,5 respectively using Enqueue method");
     queue.enueue(1);
     queue.enueue(2);
     queue.enueue(3);
@@ -58,4 +59,8 @@ export const queue = () => {
     queue.print();
     console.log("Peek method==>",queue.peek());
     console.log("Size method==>",queue.size());
+    console.log("Clear method==>",queue.clear());
+    console.log("Print method");
+    queue.print();
+    console.log("due to using shift for dequeue method, it has Linear Time Complexity ==> Big-O = O(n)");
 }

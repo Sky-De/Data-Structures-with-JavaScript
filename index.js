@@ -1,5 +1,6 @@
 import { Array, Object, setExample, mapExample } from "./DataStructures/1_builtIn/index.js";
 import { stackExample } from "./DataStructures/2_stack/stack.js";
+import { optimizedQueue } from "./DataStructures/3_queue/optimizedQueue.js";
 import { queue } from "./DataStructures/3_queue/queue.js";
 
 // To see showCases uncomment intended example and use "npm run start" command
@@ -27,8 +28,8 @@ import { queue } from "./DataStructures/3_queue/queue.js";
 
 // QUEUE----------------------------------------------------------------------
 
-// Queue--------------
+// Queue-Array-------------
 // queue();
 
-// Optimized-Queue----
-// optimizedQueue();
+// Optimized-Queue--Object-
+optimizedQueue();
