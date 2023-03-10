@@ -1,5 +1,6 @@
 import { Array, Object, setExample, mapExample } from "./DataStructures/1_builtIn/index.js";
 import { stackExample } from "./DataStructures/2_stack/stack.js";
+import { circularQueue } from "./DataStructures/3_queue/circularQueue.js";
 import { optimizedQueue } from "./DataStructures/3_queue/optimizedQueue.js";
 import { queue } from "./DataStructures/3_queue/queue.js";
 
@@ -32,4 +33,7 @@ import { queue } from "./DataStructures/3_queue/queue.js";
 // queue();
 
 // Optimized-Queue--Object-
-optimizedQueue();
+// optimizedQueue();
+
+// Circular-Queue----------
+circularQueue();

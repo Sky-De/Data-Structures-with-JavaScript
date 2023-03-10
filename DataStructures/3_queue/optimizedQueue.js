@@ -39,8 +39,6 @@ export const optimizedQueue = () => {
             if(this.isEmpty()) console.log("this queue is empty");
             console.log(this.items);
         }
-    
-    
     }
 
 
@@ -63,3 +61,6 @@ export const optimizedQueue = () => {
     console.log("Size method==>",queue.size());
     console.log("due to using object, it has Constant Time Complexity ==> Big-O = O(1)");
 }
+
+
+// review
