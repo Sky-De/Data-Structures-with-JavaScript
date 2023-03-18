@@ -30,6 +30,26 @@ class LinkedList{
         this.size++;
     }
 
+    insert(value, index) {
+        if(index < 0 || index > this.size) {
+            console.log(`index (${index}) is not valid`);
+            return
+        };
+        if(index === 0) {
+            this.prepend(value);
+            return
+        }
+        const node = new Node(value);
+        let pre = this.head;
+        for (let i = 0; i < index -1 ; i++) {
+            pre = pre.next;
+        }
+
+        node.next = pre.next;
+        pre.next = node;
+        this.size++
+    }  
+
     print(){
 
         if(this.isEmpty()){
@@ -52,16 +72,26 @@ const list = new LinkedList();
 console.log("is list empty ?", list.isEmpty());
 console.log("list size :", list.getSize());
 console.log("print method");
-list.print()
+list.print();
 console.log("prepend 10 using prepend method");
 list.prepend(10);
 console.log("print method");
-list.print()
+list.print();
 console.log("prepend 20 using prepend method");
 list.prepend(20);
 console.log("print method");
-list.print()
+list.print();
 console.log("prepend 30 using prepend method");
 list.prepend(30);
 console.log("print method");
-list.print()
+list.print();
+console.log("insert 40 into index 1 using insert method");
+list.insert(40,1);
+console.log("print method");
+list.print();
+console.log("insert 50 into index 0 using insert method");
+list.insert(50,0);
+console.log("print method");
+list.print();
+console.log("insert 60 into index -2 using insert method");
+list.insert(60,-2);
