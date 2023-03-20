@@ -50,6 +50,27 @@ class LinkedList{
         this.size++
     }  
 
+    removeFrom(index){
+        if(index < 0 || index > this.size) {
+            return [null,"index is not valid"]
+        };
+        let removeNode;
+        if(index === 0){
+            removeNode = this.head;
+            this.head = this.head.next;
+        }else{
+            let pre = this.head;
+            for(let i = 0; i < index - 1; i++){
+                pre = pre.next;
+            }
+            removeNode = pre.next;
+            pre.next = removeNode.next;
+        }
+        this.size--;
+        return [`value removed from index ${index} =>`,removeNode.value];
+
+    }
+
     print(){
 
         if(this.isEmpty()){
@@ -95,3 +116,8 @@ console.log("print method");
 list.print();
 console.log("insert 60 into index -2 using insert method");
 list.insert(60,-2);
+console.log("print method");
+list.print();
+console.log("remove index = 3 (20) using removeFrom method :", list.removeFrom(3));
+console.log("print method");
+list.print();
