@@ -51,9 +51,9 @@ class LinkedList{
     }  
 
     removeFrom(index){
-        if(index < 0 || index > this.size) {
-            return [null,"index is not valid"]
-        };
+        if(index < 0 || index > this.size) return [null,`index ${index} is not valid`];
+            
+       
         let removeNode;
         if(index === 0){
             removeNode = this.head;
@@ -69,6 +69,28 @@ class LinkedList{
         this.size--;
         return [`value removed from index ${index} =>`,removeNode.value];
 
+    }
+
+    removeValue(value){
+        if(this.isEmpty()) return [null,"list is empty"];
+        if(this.head.value === value) {
+            this.head = this.head.next;
+            this.size--;
+            return ["removed value =>",value]
+        }
+        let pre = this.head;
+        while (pre.next && pre.next.value !== value ) {
+            pre = pre.next;
+        }
+        if(pre.next) {
+            const removedNode = pre.next;
+            pre.next = removedNode.next;
+            this.size--;
+            return ["removed value=>",value]
+        }
+
+        return [null,"value dose not exist in list"];
+        
     }
 
     print(){
@@ -119,5 +141,13 @@ list.insert(60,-2);
 console.log("print method");
 list.print();
 console.log("remove index = 3 (20) using removeFrom method :", list.removeFrom(3));
+// fixIt-------------------------------------------------------------------------
+// console.log("remove index = 5 () using removeFrom method :", list.removeFrom(5));
+// console.log("remove index = 4 (null) using removeFrom method :", list.removeFrom(5));
+console.log("print method");
+list.print();
+// console.log("remove index = 3 (20) using removeFrom method :", list.removeFrom(3));
+
+console.log("remove value = 40 using removeValue method :", list.removeValue(40));
 console.log("print method");
 list.print();
