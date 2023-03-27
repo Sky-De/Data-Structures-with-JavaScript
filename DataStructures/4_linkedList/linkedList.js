@@ -93,6 +93,18 @@ class LinkedList{
         
     }
 
+    search(value){
+        if(this.isEmpty()) return [`there is not any ${value} in list`,-1];
+        let current = this.head;
+        let index = 0;
+        while(current){
+            if(current.value === value) return ["value is in index =>",index];
+            current = current.next;
+            index++
+        }
+        return [`there is not any ${value} in list`,-1];
+    }
+
     print(){
 
         if(this.isEmpty()){
@@ -151,3 +163,5 @@ list.print();
 console.log("remove value = 40 using removeValue method :", list.removeValue(40));
 console.log("print method");
 list.print();
+console.log("serach 10 using search() method and shows index of value :", list.search(10));
+console.log("serach 800 using search() method and shows index of value :", list.search(800));
