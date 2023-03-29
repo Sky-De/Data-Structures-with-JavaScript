@@ -19,7 +19,7 @@ class LinkedList{
     getSize(){
         return this.size;
     }
-
+    // O(1)
     prepend(value){
         const node = new Node(value);
         if(this.isEmpty()) this.head = node;
@@ -28,6 +28,19 @@ class LinkedList{
             this.head = node;
         }
         this.size++;
+    }
+    // O(n)
+    append(value){
+        const node = new Node(value);
+        if(this.isEmpty()) this.head = node;
+        else{
+            let pre = this.head;
+            while (pre.next) {
+                pre = pre.next;
+            }
+            pre.next = node;
+        }
+        this.size++
     }
 
     insert(value, index) {
@@ -181,5 +194,8 @@ console.log("serach 800 using search() method and shows index of value :", list.
 console.log("print method");
 list.print();
 console.log(" list reversed using reverse method", list.reverse());
+console.log("print method");
+list.print();
+console.log("add 60 to the end of list using append method", list.append(60));
 console.log("print method");
 list.print();
