@@ -105,6 +105,19 @@ class LinkedList{
         return [`there is not any ${value} in list`,-1];
     }
 
+    reverse() {
+        let pre = null;
+        let current = this.head;
+        while(current) {
+            let next = current.next;
+            current.next = pre;
+            pre = current;
+            current = next;
+        }
+        this.head = pre;
+        return ["List reversed"]
+    }
+
     print(){
 
         if(this.isEmpty()){
@@ -165,3 +178,8 @@ console.log("print method");
 list.print();
 console.log("serach 10 using search() method and shows index of value :", list.search(10));
 console.log("serach 800 using search() method and shows index of value :", list.search(800));
+console.log("print method");
+list.print();
+console.log(" list reversed using reverse method", list.reverse());
+console.log("print method");
+list.print();
