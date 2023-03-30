@@ -41,6 +41,7 @@ class LinkedList{
             pre.next = node;
         }
         this.size++
+        return [value,"added to the end of list"]
     }
 
     insert(value, index) {
