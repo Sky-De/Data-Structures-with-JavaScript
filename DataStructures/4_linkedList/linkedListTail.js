@@ -6,7 +6,7 @@ class Node{
     }
 }
 
-class LinkedList{
+export class LinkedListTail{
     constructor(){
         this.head = null;
         this.tail = null;
@@ -91,22 +91,22 @@ class LinkedList{
 }
 
 // append-review 
-const list = new LinkedList();
-console.log("10,20,30 added to front of list using prepend method-----------------");
-console.log(list.prepend(10));
-console.log(list.prepend(20));
-console.log(list.prepend(30));
-console.log("print method---------------------------------------------------------");
-list.print();
-console.log("60 added to end of list using append method--------------------------");
-console.log(list.append(60));
-console.log("print method---------------------------------------------------------");
-list.print()
-console.log("removeFromFront method------------------------------------------------");
-console.log(list.removeFromFront());
-console.log("print method---------------------------------------------------------");
-list.print()
-console.log("removeFromEnd method--------------------------------------------------");
-console.log(list.removeFromEnd());
-console.log("print method---------------------------------------------------------");
-list.print()
+const list = new LinkedListTail();
+// console.log("10,20,30 added to front of list using prepend method-----------------");
+// console.log(list.prepend(10));
+// console.log(list.prepend(20));
+// console.log(list.prepend(30));
+// console.log("print method---------------------------------------------------------");
+// list.print();
+// console.log("60 added to end of list using append method--------------------------");
+// console.log(list.append(60));
+// console.log("print method---------------------------------------------------------");
+// list.print()
+// console.log("removeFromFront method------------------------------------------------");
+// console.log(list.removeFromFront());
+// console.log("print method---------------------------------------------------------");
+// list.print()
+// console.log("removeFromEnd method--------------------------------------------------");
+// console.log(list.removeFromEnd());
+// console.log("print method---------------------------------------------------------");
+// list.print()

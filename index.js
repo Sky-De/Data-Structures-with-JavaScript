@@ -36,4 +36,7 @@ import { queue } from "./DataStructures/3_queue/queue.js";
 // optimizedQueue();
 
 // Circular-Queue----------
-circularQueue();
+// circularQueue();
+
+// LINKED-LIST--------------------------------------------
+// add linked list-remember we used Linked list tail at linked list stack
