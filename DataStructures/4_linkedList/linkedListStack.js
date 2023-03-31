@@ -17,6 +17,14 @@ class LinkedListStack{
         return this.list.head.value;
     }
 
+    isEmpty(){
+       return this.list.is();
+    }
+
+    getSize(){
+       return this.list.getSize();
+    }
+
     print(){
         this.list.print();
     }
@@ -38,3 +46,10 @@ console.log("remove last element using pop--------------");
 stack.pop();
 console.log("peek method----------------------------");
 console.log(stack.peek());
+console.log("isEmpty method----------------------------");
+console.log(stack.isEmpty());
+console.log("getSize method----------------------------");
+console.log(stack.getSize());
+console.log("print method---------------------------");
+stack.print();
+
