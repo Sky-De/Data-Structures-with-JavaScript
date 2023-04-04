@@ -49,5 +49,6 @@ console.log("getting name usning get method--------");
 console.log(table.get("name"));
 console.log("removing name usning remove method--------");
 console.log(table.remove("name"));
+
 console.log("display method-----------");
 table.display();
