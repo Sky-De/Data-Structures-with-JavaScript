@@ -39,7 +39,30 @@ class BinarySearchTree {
             else if(value < root.value) return this.search(root.left, value);
             else return this.search(root.right, value);
         }
+    }
 
+    preOrder(root) {
+        if(root) {
+            console.log(root.value);
+            this.preOrder(root.left);
+            this.preOrder(root.right);
+        }
+    }
+
+    inOrder(root) {
+        if(root) {
+            this.inOrder(root.left);
+            console.log(root.value);
+            this.inOrder(root.right);
+        }
+    }
+
+    postOrder(root) {
+        if(root) {
+            this.inOrder(root.left);
+            this.inOrder(root.right);
+            console.log(root.value);
+        }
     }
 }
 // review--all
@@ -54,3 +77,13 @@ console.log("search for 10", bst.search(bst.root, 10));
 console.log("search for 5", bst.search(bst.root, 5));
 console.log("search for 15", bst.search(bst.root, 15));
 console.log("search for 30", bst.search(bst.root, 30));
+console.log("inserting 3, 7 to the tree using inerst method--------------------");
+bst.insert(3);
+bst.insert(7);
+console.log("invoking preOrder method--------------------");
+bst.preOrder(bst.root);
+console.log("invoking inOrder method--------------------");
+bst.inOrder(bst.root);
+console.log("invoking postOrder method--------------------");
+bst.postOrder(bst.root);
+
