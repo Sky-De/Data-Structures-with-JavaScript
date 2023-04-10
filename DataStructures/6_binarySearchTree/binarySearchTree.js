@@ -64,6 +64,18 @@ class BinarySearchTree {
             console.log(root.value);
         }
     }
+
+    levelOrder() {
+        const queue = [];
+        queue.push(this.root);
+        while (queue.length) {
+            let current = queue.shift();
+            console.log(current.value);
+            if(current.left) queue.push(current.left);
+            if(current.right) queue.push(current.right);
+            
+        }
+    }
 }
 // review--all
 const bst = new BinarySearchTree();
@@ -80,10 +92,12 @@ console.log("search for 30", bst.search(bst.root, 30));
 console.log("inserting 3, 7 to the tree using inerst method--------------------");
 bst.insert(3);
 bst.insert(7);
-console.log("invoking preOrder method--------------------");
-bst.preOrder(bst.root);
-console.log("invoking inOrder method--------------------");
-bst.inOrder(bst.root);
-console.log("invoking postOrder method--------------------");
-bst.postOrder(bst.root);
+// console.log("invoking preOrder method--------------------");
+// bst.preOrder(bst.root);
+// console.log("invoking inOrder method--------------------");
+// bst.inOrder(bst.root);
+// console.log("invoking postOrder method--------------------");
+// bst.postOrder(bst.root);
+console.log("invoking levelOrder method--------------------");
+bst.levelOrder(bst.root);
 
