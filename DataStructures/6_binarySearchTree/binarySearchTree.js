@@ -76,6 +76,16 @@ class BinarySearchTree {
             
         }
     }
+
+    min(root) {
+        if(!root.left) return `max value in tree is ${root.value}`;
+        else return this.min(root.left);
+    }
+
+    max(root) {
+        if(!root.right) return `max value in tree is ${root.value}`;
+        else return this.min(root.right);
+    }
 }
 // review--all
 const bst = new BinarySearchTree();
@@ -98,6 +108,8 @@ bst.insert(7);
 // bst.inOrder(bst.root);
 // console.log("invoking postOrder method--------------------");
 // bst.postOrder(bst.root);
-console.log("invoking levelOrder method--------------------");
-bst.levelOrder(bst.root);
+// console.log("invoking levelOrder method--------------------");
+// bst.levelOrder();
+console.log("finding min value in tree using min method =>",bst.min(bst.root));
+console.log("finding max value in tree using min method =>",bst.max(bst.root));
 
