@@ -73,18 +73,35 @@ class BinarySearchTree {
             console.log(current.value);
             if(current.left) queue.push(current.left);
             if(current.right) queue.push(current.right);
-            
         }
     }
 
     min(root) {
-        if(!root.left) return `max value in tree is ${root.value}`;
+        if(!root.left) return root.value;
         else return this.min(root.left);
     }
 
     max(root) {
-        if(!root.right) return `max value in tree is ${root.value}`;
+        if(!root.right) return root.value;
         else return this.min(root.right);
+    }
+
+    delete(value) {
+        this.root = this.deleteNode(this.root, value);
+    }
+
+    deleteNode(root, value) {
+        if(root === null) return root;
+        if(value < root.value) root.left = this.deleteNode(root.left, value);
+        else if(value > root.value) root.right = this.deleteNode(root.right, value);
+        else{
+            if(!root.left && !root.right) return null;
+            if(!root.left) return root.right;
+            else if(!root.right) return root.left;
+            root.value = this.min(root.right);
+            root.right = this.deleteNode(root.right, root.value)
+        }
+        return root;
     }
 }
 // review--all
@@ -102,14 +119,20 @@ console.log("search for 30", bst.search(bst.root, 30));
 console.log("inserting 3, 7 to the tree using inerst method--------------------");
 bst.insert(3);
 bst.insert(7);
-// console.log("invoking preOrder method--------------------");
-// bst.preOrder(bst.root);
-// console.log("invoking inOrder method--------------------");
-// bst.inOrder(bst.root);
-// console.log("invoking postOrder method--------------------");
-// bst.postOrder(bst.root);
-// console.log("invoking levelOrder method--------------------");
-// bst.levelOrder();
+console.log("invoking preOrder method--------------------");
+bst.preOrder(bst.root);
+console.log("invoking inOrder method--------------------");
+bst.inOrder(bst.root);
+console.log("invoking postOrder method--------------------");
+bst.postOrder(bst.root);
+console.log("invoking levelOrder method--------------------");
+bst.levelOrder();
 console.log("finding min value in tree using min method =>",bst.min(bst.root));
 console.log("finding max value in tree using min method =>",bst.max(bst.root));
+console.log("invoking levelOrder method--------------------");
+bst.levelOrder();
+console.log("deleting 5 usning delete method----------------");
+bst.delete(5);
+console.log("invoking levelOrder method--------------------");
+bst.levelOrder();
 
