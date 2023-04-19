@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
-    "test": "nodemon DataStructures/6_binarySearchTree/binarySearchTree.js"
+    "test": "nodemon DataStructures/7_graph/graph.js"
   },
   "author": "SkyDe",
   "license": "ISC",
